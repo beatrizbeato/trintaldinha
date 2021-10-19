@@ -1,0 +1,56 @@
+.o-skeleton{
+  min-height: 100vh;
+}
+
+.o-side-wrapper{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  flex: 1 0 auto;
+  @include mappy-bp(s){
+    flex-direction: row;
+  }
+}
+
+.o-side{
+  width: 100%;
+  min-height: 50vh;
+  padding: $qnorr-baseline*4;
+  z-index: -1;
+  @include mappy-bp(s){
+     width: 50%;
+
+  }
+}
+
+.c-subtitle{
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  padding: $qnorr-baseline;
+  margin: $qnorr-baseline*2 $qnorr-baseline*2 $qnorr-baseline*4;
+  background: get-color(blue);
+  border: 2px solid get-color(black);
+  &::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -$qnorr-baseline;
+    left: $qnorr-baseline;
+    background: get-color(white);
+    border: 2px solid get-color(black);
+    z-index: -1;
+  }
+}
+
+.c-info{
+  display: inline-block;
+  background: get-color(black);
+  color: get-color(white);
+  padding: $qnorr-baseline $qnorr-baseline*3;
+  margin-bottom: $qnorr-baseline*3;
+  font-size: 28px;
+}
