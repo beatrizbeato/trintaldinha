@@ -458,6 +458,8 @@ body { font-family: "Rawline", sans-serif; font-size: 1rem; line-height: 1.5; fo
 
 .o-skeleton { min-height: 100vh; }
 
+.c-image { max-width: 100%; max-height: 90vh; }
+
 .o-side-wrapper { height: 100%; width: 100%; display: flex; flex-wrap: nowrap; flex-direction: column; flex: 1 0 auto; }
 
 @media all and (min-width: 37.5em) { .o-side-wrapper { flex-direction: row; } }
