@@ -176,6 +176,10 @@ html, body { width: 100%; height: 100%; margin: 0; }
 
 body { font-family: "Rawline", sans-serif; font-size: 1rem; line-height: 1.5; font-weight: 400; font-stretch: normal; font-variant: normal; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 
+body { color: #000000; background: #73CAD1; font-family: 'Bungee', BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; font-size: 1rem; }
+
+h1, h2, h3, h4, h5, h6, input, button { font-family: 'Bungee', BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
+
 .o-skeleton { position: relative; width: 100%; display: flex; flex-direction: column; flex: 1 0 auto; }
 
 .o-skeleton__head, .o-skeleton__feet, .o-skeleton__foot, .o-skeleton__footer, .o-skeleton__tip { position: relative; flex: none; }
@@ -458,25 +462,63 @@ body { font-family: "Rawline", sans-serif; font-size: 1rem; line-height: 1.5; fo
 
 .o-skeleton { min-height: 100vh; }
 
-.c-image { max-width: 100%; max-height: 90vh; }
+.c-text { font-size: 16px; font-family: 'Source Sans Pro', BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; margin-bottom: 24px; }
 
-.o-side-wrapper { height: 100%; width: 100%; display: flex; flex-wrap: nowrap; flex-direction: column; flex: 1 0 auto; }
+.c-title, [class*="c-title"] { position: relative; display: inline-block; font-size: 24px; padding: 8px; margin: 16px 0px 24px; background: #FFFFFF; border: 2px solid #000000; }
 
-@media all and (min-width: 37.5em) { .o-side-wrapper { flex-direction: row; } }
+.c-title::after, [class*="c-title"]::after { content: ''; width: 100%; height: 100%; position: absolute; top: -8px; left: 8px; background: #F36FA8; border: 2px solid #000000; z-index: -1; }
 
-.o-side { width: 100%; min-height: 50vh; padding: 32px; z-index: -1; }
+.c-title[class*="--yellow"], [class*="c-title"][class*="--yellow"] { background: #FFE660; }
 
-@media all and (min-width: 37.5em) { .o-side { width: 50%; } }
+.c-title[class*="--yellow"]::after, [class*="c-title"][class*="--yellow"]::after { background: #FFFFFF; }
 
-.c-subtitle { position: relative; display: inline-block; font-size: 30px; padding: 8px; margin: 16px 16px 32px; background: #73CAD1; border: 2px solid #000000; }
+.c-title[class*="--blue"], [class*="c-title"][class*="--blue"] { background: #73CAD1; }
 
-.c-subtitle::after { content: ''; width: 100%; height: 100%; position: absolute; top: -8px; left: 8px; background: #FFFFFF; border: 2px solid #000000; z-index: -1; }
+.c-title[class*="--blue"]::after, [class*="c-title"][class*="--blue"]::after { background: #FFFFFF; }
 
-.c-info { display: inline-block; background: #000000; color: #FFFFFF; padding: 8px 24px; margin-bottom: 24px; font-size: 28px; }
+.c-title[class*="--pink"], [class*="c-title"][class*="--pink"] { background: #FFBDDA; }
 
-.o-container { display: block; margin: 0 auto; width: 100%; padding: 0 16px; }
+.c-title[class*="--pink"]::after, [class*="c-title"][class*="--pink"]::after { background: #FFFFFF; }
 
-.o-section { display: block; margin: 0 auto; width: 100%; padding: 40px 0; }
+.c-info, [class*="c-info"] { display: inline-block; background: #FFFFFF; color: #000000; padding: 8px; margin-bottom: 24px; border: 1px solid #000000; }
+
+.c-info[class*="--yellow"], [class*="c-info"][class*="--yellow"] { background: #FFE660; }
+
+.c-info[class*="--blue"], [class*="c-info"][class*="--blue"] { background: #73CAD1; }
+
+.c-info[class*="--pink"], [class*="c-info"][class*="--pink"] { background: #FFBDDA; }
+
+.c-link { background: #000000; color: #FFFFFF; padding: 8px; transition: all 0.2s ease-in-out; }
+
+.c-link:hover { background: #FFFFFF; color: #000000; }
+
+.u-relative { position: relative; }
+
+.o-hero { padding: 64px 0px 0px; background: linear-gradient(#73CAD1 80%, #FFBDDA 80%); }
+
+.o-hero__image { z-index: 1; height: 580px; cursor: pointer; transform: scale(1); }
+
+.o-hero__image:hover { animation: pulse 0.5s infinite; }
+
+.o-dresscode__image { z-index: 1; width: 100%; cursor: pointer; transform: scale(1); }
+
+.o-dresscode__image:hover { animation: pulse 0.5s infinite; }
+
+.o-map { padding: 48px 0px 0px; background: linear-gradient(#73CAD1 80%, #FFE660 80%); }
+
+.o-map__image { z-index: 1; height: 500px; cursor: pointer; transform: scale(1); }
+
+.o-map__image:hover { animation: pulse 0.5s infinite; }
+
+.o-dormidas__image { z-index: 1; width: 100%; padding-left: 48px; }
+
+@keyframes pulse { 0% { transform: scale(0.95); }
+  70% { transform: scale(1); }
+  100% { transform: scale(0.95); } }
+
+.o-container { display: block; margin: 0 auto; width: 100%; max-width: 1140px; padding: 0 16px; }
+
+.o-section { display: block; margin: 0 auto; width: 100%; z-index: 0; }
 
 .o-section--small { display: block; margin: 0 auto; width: 100%; padding: 24px 0; }
 
@@ -536,10 +578,6 @@ ol.c-list { padding-left: 24px; }
 textarea.c-input { max-width: 100%; min-width: 100%; min-height: 144px; max-height: 256px; padding-top: 16px; font-family: "Rawline", sans-serif; }
 
 .c-card { display: block; margin: 0 auto; width: 100%; padding: 16px; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1); }
-
-body { background: #FFFFFF; font-family: 'Bungee', cursive; }
-
-h1, h2, h3, h4, h5, h6, input, button { font-family: 'Bungee', BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
 
 /* stylelint-disable string-quotes */
 .u-p { padding: 8px !important; }
@@ -1115,9 +1153,9 @@ h1, h2, h3, h4, h5, h6, input, button { font-family: 'Bungee', BlinkMacSystemFon
 
 .u-bg-color-dark-pink { background-color: #F36FA8; }
 
-.u-color-yellow { color: #F9E103; }
+.u-color-yellow { color: #FFE660; }
 
-.u-bg-color-yellow { background-color: #F9E103; }
+.u-bg-color-yellow { background-color: #FFE660; }
 
 .u-cf:after { content: " "; display: block; clear: both; }
 
