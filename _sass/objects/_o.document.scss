@@ -204,6 +204,20 @@
   padding: $qnorr-baseline*6 0px;
 }
 
+.o-magazine__header{
+  width: 960px;
+  margin: 0px auto 20px;
+}
+
+.o-magazine__header-link{
+  color: get-color(black);
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+  &:hover{
+    color: get-color(white);
+  }
+}
+
 .o-page__content{
   position: relative;
   height: 100%;
