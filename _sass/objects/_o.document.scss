@@ -275,6 +275,10 @@
   width: 50px;
 }
 
+.o-hard__logo{
+  height: 18px;
+}
+
 .c-pagination{
   position: absolute;
   top: 15px;
@@ -285,12 +289,29 @@
 #magazine{
   width: 960px;
   height: 600px;
-  background: get-color(yellow);
   margin: 0px auto;
 }
 
 #magazine .turn-page{
-  background-color: red;
+  background-color: #ccc;
+}
+
+.hard-ext{
+  background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
+  background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
+  background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
+  background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
+  background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
+  background-image:linear-gradient(left, #fff 95%, #dadada 100%);
+}
+
+.hard-int{
+  background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #fff), color-stop(1, #cacaca));
+  background-image:-webkit-linear-gradient(right, #fff 95%, #cacaca 100%);
+  background-image:-moz-linear-gradient(right, #fff 95%, #cacaca 100%);
+  background-image:-ms-linear-gradient(right, #fff 95%, #cacaca 100%);
+  background-image:-o-linear-gradient(right, #fff 95%, #cacaca 100%);
+  background-image:linear-gradient(right, #fff 95%, #cacaca 100%);
 }
 
 #magazine .even{
