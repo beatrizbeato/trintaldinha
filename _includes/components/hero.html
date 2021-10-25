@@ -1,14 +1,17 @@
 <div class="o-section o-hero">
   <div class="o-container">
     <div class="o-grid">
-      <div class="o-grid__col u-colspan-8 u-relative">
+      <div class="o-grid__col u-colspan-12 u-colspan-8@md u-relative" data-flout="justify-center--justify-start@md--">
         <audio 
       id="nav_audio"
       src="//soundyapp.s3.amazonaws.com/sounds/clips/000/001/365/original/vengaboys-boom-boom-boom-boom20180425-4-nc3vkc_copy.mp3?1524699321"
       ></audio>
-        <img src="{{ site.baseurl }}/assets/images/hero-spice.png" alt="spice-girls" class="o-hero__image js-play-sound"/>
+        <picture>
+          <source media="(min-width: 650px)" srcset="{{ site.baseurl }}/assets/images/hero-spice.png">
+          <img src="{{ site.baseurl }}/assets/images/hero-spice-mobile.png" alt="spice-girls" class="o-hero__image js-play-sound"/>
+        </picture>
       </div>
-      <div class="o-grid__col u-colspan-4" data-flout="col-- align-start-- justify-center--">
+      <div class="o-grid__col u-colspan-12 u-colspan-4@md o-hero__info" data-flout="col-- align-start-- justify-center--">
          <p class="c-title">Quinta do Hospício<br>13 Novembro, 17h</p>
     <p class="c-text">Vem festejar os meus 30 anos nesta 90's party! A partir das 17h com lanchinho e bolo de aniversário, seguindo para jantar pelas 20h30 e terminando com uma party all night long! O preço por pessoa é 15 euros e inclui muita comida, bebida e festa da boa. Conto contigo!</p>
         <p class="c-info--yellow">Confirma até dia 1 de Novembro!</p>

@@ -6,6 +6,7 @@
   font-size: 16px;
   font-family: 'Source Sans Pro', BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin-bottom: $qnorr-baseline*3;
+  max-width: 100%;
 }
 
 
@@ -85,17 +86,45 @@
 }
 
 .o-hero{
-  padding: $qnorr-baseline*8 0px 0px;
-  background: linear-gradient(  get-color(blue) 80%,  get-color(pink) 80%);
+  padding: $qnorr-baseline*4 0px 0px;
+  background: get-color(blue);
+  min-height: 860px;
+  @include mappy-bp(s){
+    min-height: 760px;
+  }
+  @include mappy-bp(md){
+    min-height: 0px;
+    padding: $qnorr-baseline*8 0px 0px;
+    background: linear-gradient(  get-color(blue) 80%,  get-color(pink) 80%);
+  }
 }
 
 .o-hero__image{
   z-index: 1;
-  height: 580px;
+  max-width: 100%;
   cursor: pointer;
   transform: scale(1);
   &:hover{
     animation: pulse 0.5s infinite;
+  }
+  @include mappy-bp(s){
+    height: 580px;
+  }
+}
+
+.o-hero__info{
+  position: absolute;
+  top: 430px;
+  @include mappy-bp(md){
+    position: relative;
+    top: auto;
+  }
+}
+
+.o-dresscode{
+  padding: $qnorr-baseline*5 0px;
+  @include mappy-bp(md){
+    padding: 0px;
   }
 }
 
@@ -110,24 +139,51 @@
 }
 
 .o-map{
-  padding: $qnorr-baseline*6 0px 0px;
-  background: linear-gradient(  get-color(blue) 80%,  get-color(yellow) 80%);
+  padding: $qnorr-baseline*5 0px 0px;
+  background: get-color(blue);
+  min-height: 880px;
+  @include mappy-bp(md){
+    min-height: 0px;
+    padding: $qnorr-baseline*6 0px 0px;
+    background: linear-gradient(  get-color(blue) 80%,  get-color(yellow) 80%);
+  }
+}
+
+.o-map__info{
+  position: absolute;
+  top: 410px;
+  @include mappy-bp(md){
+    position: relative;
+    top: auto;
+    margin-top: $qnorr-baseline*8;
+  }
 }
 
 .o-map__image{
-  z-index: 1;
   height: 500px;
   cursor: pointer;
   transform: scale(1);
   &:hover{
     animation: pulse 0.5s infinite;
   }
+  @include mappy-bp(md){
+    z-index: 1;
+  }
+}
+
+.o-dormidas{
+  padding: $qnorr-baseline*4 0px;
+  @include mappy-bp(md){
+    padding: 0px;
+  }
 }
 
 .o-dormidas__image{
   z-index: 1;
   width: 100%;
-  padding-left: $qnorr-baseline*6;
+  @include mappy-bp(md){
+    padding-left: $qnorr-baseline*6;
+  }
 }
 
 @keyframes pulse {
