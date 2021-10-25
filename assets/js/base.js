@@ -1,7 +1,7 @@
 // ---
 $( document ).ready(function() {
     console.log('ready!');
-
+    $('#magazine').turn({ acceleration: true});
 
     function disableScroll(){
       console.log('finalmente!')
