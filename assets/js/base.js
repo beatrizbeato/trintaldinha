@@ -34,6 +34,8 @@ $( document ).ready(function() {
     element.pause();
   }
 
+  // play
+
   $( ".js-play-hero-audio").mouseenter(function() {
       var selectedAudio = $("#hero-audio")[0]
       playAudio(selectedAudio)
@@ -44,7 +46,7 @@ $( document ).ready(function() {
       playAudio(selectedAudio)
   });
 
-  $( ".js-play-dresscode-audio" ).mouseenter(function() {
+  $( ".js-play-dresscode-audio").mouseenter(function() {
       var selectedAudio = $("#dresscode-audio")[0]
       playAudio(selectedAudio)
   });
@@ -58,6 +60,9 @@ $( document ).ready(function() {
       var selectedAudio = $("#dormidas-audio")[0]
       playAudio(selectedAudio)
   });
+
+  // pause
+
 
   $( ".js-play-hero-audio").mouseleave(function() {
       var selectedAudio = $("#hero-audio")[0]
@@ -84,6 +89,16 @@ $( document ).ready(function() {
       pauseAudio(selectedAudio)
   });
 
+  //mobile
+     document.getElementsByClassName('js-play-hero-audio')[0].addEventListener('touchstart', function(e){
+      var selectedAudio = $("#hero-audio")[0]
+      playAudio(selectedAudio)
+    }, false)
+ 
+    document.getElementsByClassName('js-play-hero-audio')[0].addEventListener('touchend', function(e){
+      var selectedAudio = $("#hero-audio")[0]
+      pauseAudio(selectedAudio)
+    }, false)
 
 });
 // ---
