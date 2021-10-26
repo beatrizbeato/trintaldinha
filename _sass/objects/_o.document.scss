@@ -59,6 +59,7 @@
   padding: $qnorr-baseline;
   margin-bottom: $qnorr-baseline*3;
   border: 1px solid get-color(black);
+  transition: all 0.2s ease-in-out;
   &[class*="--yellow"]{
     background: get-color(yellow);
   }
@@ -67,6 +68,11 @@
   }
   &[class*="--pink"]{
     background: get-color(pink);
+  }
+  &[class*="--link"]{
+    &:hover{
+      animation: pulse 0.6s infinite;
+    }
   }
 }
 
