@@ -211,10 +211,9 @@
 }
 
 .o-magazine__header{
-  margin: 0px auto $qnorr-baseline*8;
-  @include mappy-bp(md){
-    width: 960px;
-  }
+  position: absolute;
+  top: $qnorr-baseline*2;
+  left: $qnorr-baseline*2;
 }
 
 .o-magazine__header-link{
@@ -230,12 +229,15 @@
 }
 
 .o-magazine__instructions{
-  @include mappy-bp(s){
+  width: 100%;
+  margin-top: $qnorr-baseline*6;
+  @include mappy-bp(md){
     position: absolute;
     width: 960px;
     top: $qnorr-baseline*16;
     left: 50%;
     transform: translateX(-50%);
+    margin: 0px;
     .c-info--pink{
       max-width: 45%;
     }
@@ -283,12 +285,15 @@
 }
 
 .o-page__title{
-  position: absolute;
-  top: 20px;
-  left: 40px;
-  margin: 0px;
+  margin: $qnorr-baseline*2 0px;
   padding: $qnorr-baseline/2;
   font-size: 18px;
+  @include mappy-bp(md){
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    margin: 0px;
+  }
 }
 
 .o-page__logo{
@@ -310,11 +315,7 @@
   font-size: 13px;
 }
 
-#magazine{
-  width: 960px;
-  height: 600px;
-  margin: 0px auto;
-}
+
 
 #magazine .turn-page{
   background-color: #ccc;
@@ -447,3 +448,67 @@
   top: -50px;
   right: 30px;
 }
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  height: 90%;
+  justify-content: center;
+  margin: 5%;
+  width: 90%;
+}
+.aspect {
+  padding-bottom: 70%;
+  position: relative;
+  width: 100%;
+}
+.aspect-inner {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.flipbook {
+  position: relative;
+  height: 100%;
+  transition: margin-left 0.25s ease-out;
+  width: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.flipbook .page {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.o-mobile-mag{
+  background: get-color(white);
+  z-index: 0;
+  width: 100%;
+  max-width: 500px;
+  margin: 0px auto;
+}
+
+.o-mobile-mag__inner{
+  z-index: 1;
+}
+
+.o-mobile-mag__page-col{
+  &:not(:last-child){
+    border-bottom: 1px solid get-color(blue);
+  }
+}
+
+.o-mobile-mag__page{
+  padding: $qnorr-baseline*3;
+}
+
+
+
