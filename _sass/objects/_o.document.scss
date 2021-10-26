@@ -106,7 +106,7 @@
   max-width: 100%;
   transform: scale(1);
   &:hover{
-    animation: pulse 0.5s infinite;
+    animation: pulse 0.55s infinite;
   }
   @include mappy-bp(s){
     height: 580px;
@@ -166,7 +166,7 @@
   height: 500px;
   transform: scale(1);
   &:hover{
-    animation: pulse 0.5s infinite;
+    animation: pulse 0.56s infinite;
   }
   @include mappy-bp(md){
     z-index: 1;
@@ -176,6 +176,7 @@
 .o-dormidas{
   position: relative;
   padding: $qnorr-baseline*4 0px;
+  z-index: 0;
   @include mappy-bp(md){
     padding: 0px;
   }
@@ -185,7 +186,7 @@
   z-index: 1;
   width: 100%;
   &:hover{
-    animation: pulse 0.5s infinite;
+    animation: pulse 0.47s infinite;
   }
   @include mappy-bp(md){
     padding-left: $qnorr-baseline*6;
@@ -196,7 +197,7 @@
   0% {
     transform: scale(0.95);
   }
-  70% {
+  50% {
     transform: scale(1);
   }
   
