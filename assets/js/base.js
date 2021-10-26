@@ -12,13 +12,17 @@ $( document ).ready(function() {
     $(flipbookEL).turn();
   }
 
+  $( ".js-start-button").click(function() {
+      $(".o-start").addClass('u-hidden');
+      $("body").removeClass('u-no-scroll');
+  });
+
   if ($('#hero-audio').length ) {
     $("#hero-audio")[0].load();
     $("#dresscode-audio")[0].load();
     $("#map-audio")[0].load();
     $("#dormidas-audio")[0].load();
   }
-
 
   function playAudio(element) {
     element.play();

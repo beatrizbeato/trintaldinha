@@ -2,6 +2,80 @@
   min-height: 100vh;
 }
 
+.o-start{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-image: url("/assets/images/fundo-start-m.svg"); 
+  background-color: get-color(blue); 
+    background-position: 0px 46px;
+    background-repeat: no-repeat;
+    background-size: 400px;
+  @include mappy-bp(s){
+    background-image: url("/assets/images/fundo-start.svg"); 
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+}
+
+.o-start__content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.o-start__info{
+  font-size: 20px;
+  color: get-color(black);
+  margin-bottom: $qnorr-baseline*2;
+  @include mappy-bp(s){
+    font-size: 24px;
+    white-space: nowrap;
+    margin-bottom: $qnorr-baseline*2;
+  }
+}
+
+.o-start__title{
+  font-size: 38px;
+  line-height: 38px;
+  animation: pulse 0.6s infinite;
+  @include mappy-bp(s){
+    font-size: 68px;
+    line-height: 68px;
+  }
+}
+
+
+.o-start__button{
+  margin-top: $qnorr-baseline*4;
+  transform: scale(1);
+  cursor: pointer;
+  padding: $qnorr-baseline;
+  border: 2px solid get-color(black);
+  background: get-color(black);
+  color: get-color(white);
+  display: inline-block;
+  font-size: 18px;
+  &:hover{
+    background: get-color(white);
+    color: get-color(black);
+  }
+  @include mappy-bp(s){
+    margin-top: $qnorr-baseline*6;
+  }
+}
+
+.u-no-scroll{
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+
 .c-text{
   font-size: 16px;
   font-family: 'Source Sans Pro', BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
