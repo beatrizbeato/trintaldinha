@@ -201,20 +201,34 @@
 
 
 .o-magazine{
-  padding: $qnorr-baseline*6 0px;
+  padding: $qnorr-baseline*4 0px $qnorr-baseline*6;
 }
 
 .o-magazine__header{
   width: 960px;
-  margin: 0px auto 20px;
+  margin: 0px auto $qnorr-baseline*8;
 }
 
 .o-magazine__header-link{
-  color: get-color(black);
-  font-size: 18px;
+  background: get-color(black);
+  color: get-color(white);
+  padding: $qnorr-baseline;
+  font-size: 14px;
   transition: all 0.2s ease-in-out;
   &:hover{
-    color: get-color(white);
+    background: get-color(white);
+    color: get-color(black);
+  }
+}
+
+.o-magazine__instructions{
+  position: absolute;
+  width: 960px;
+  top: $qnorr-baseline*16;
+  left: 50%;
+  transform: translateX(-50%);
+  .c-info--pink{
+    max-width: 45%;
   }
 }
 
@@ -289,7 +303,7 @@
 #magazine{
   width: 960px;
   height: 600px;
-  margin: 0px auto;
+  margin: 0px auto ;
 }
 
 #magazine .turn-page{
