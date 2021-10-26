@@ -206,8 +206,10 @@
 }
 
 .o-magazine__header{
-  width: 960px;
   margin: 0px auto $qnorr-baseline*8;
+  @include mappy-bp(md){
+    width: 960px;
+  }
 }
 
 .o-magazine__header-link{
@@ -223,13 +225,15 @@
 }
 
 .o-magazine__instructions{
-  position: absolute;
-  width: 960px;
-  top: $qnorr-baseline*16;
-  left: 50%;
-  transform: translateX(-50%);
-  .c-info--pink{
-    max-width: 45%;
+  @include mappy-bp(s){
+    position: absolute;
+    width: 960px;
+    top: $qnorr-baseline*16;
+    left: 50%;
+    transform: translateX(-50%);
+    .c-info--pink{
+      max-width: 45%;
+    }
   }
 }
 
@@ -304,7 +308,7 @@
 #magazine{
   width: 960px;
   height: 600px;
-  margin: 0px auto ;
+  margin: 0px auto;
 }
 
 #magazine .turn-page{
@@ -312,12 +316,8 @@
 }
 
 .hard-ext{
-  background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
-  background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
-  background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
-  background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
-  background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
-  background-image:linear-gradient(left, #fff 95%, #dadada 100%);
+
+  background: #E1E1E1 !important;
 }
 
 .hard-int{
