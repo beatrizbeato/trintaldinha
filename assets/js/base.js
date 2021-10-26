@@ -14,7 +14,7 @@ $( document ).ready(function() {
 
   $( ".js-start-button").click(function() {
       $(".o-start").addClass('u-hidden');
-      $("body").removeClass('u-no-scroll');
+      $(".landing-body").removeClass('u-no-scroll');
   });
 
   if ($('#hero-audio').length ) {

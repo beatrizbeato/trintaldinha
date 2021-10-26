@@ -13,9 +13,9 @@ audio {
   z-index: 1000;
   background-image: url("/assets/images/fundo-start-m.svg"); 
   background-color: get-color(blue); 
-    background-position: 0px 46px;
-    background-repeat: no-repeat;
-    background-size: 400px;
+  background-position: 0px 46px;
+  background-repeat: no-repeat;
+  background-size: 400px;
   @include mappy-bp(s){
     background-image: url("/assets/images/fundo-start.svg"); 
     background-position: center;
@@ -292,6 +292,7 @@ audio {
 
 
 .o-magazine{
+  position: relative;
   padding: $qnorr-baseline*4 0px $qnorr-baseline*6;
 }
 
