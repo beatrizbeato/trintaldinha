@@ -56,6 +56,12 @@ $( document ).ready(function() {
       playAudio(selectedAudio)
   });
 
+  $( ".js-play-map-btn-audio" ).mouseenter(function() {
+      var selectedAudio = $("#map-audio")[0]
+      playAudio(selectedAudio)
+  });
+
+
   $( ".js-play-dormidas-audio" ).mouseenter(function() {
       var selectedAudio = $("#dormidas-audio")[0]
       playAudio(selectedAudio)
@@ -84,6 +90,11 @@ $( document ).ready(function() {
       pauseAudio(selectedAudio)
   });
 
+  $( ".js-play-map-btn-audio" ).mouseleave(function() {
+      var selectedAudio = $("#map-audio")[0]
+      pauseAudio(selectedAudio)
+  });
+
   $( ".js-play-dormidas-audio" ).mouseleave(function() {
       var selectedAudio = $("#dormidas-audio")[0]
       pauseAudio(selectedAudio)
@@ -97,6 +108,27 @@ $( document ).ready(function() {
  
     document.getElementsByClassName('js-play-hero-audio')[0].addEventListener('touchend', function(e){
       var selectedAudio = $("#hero-audio")[0]
+      pauseAudio(selectedAudio)
+    }, false)
+
+
+     document.getElementsByClassName('js-play-map-audio')[0].addEventListener('touchstart', function(e){
+      var selectedAudio = $("#map-audio")[0]
+      playAudio(selectedAudio)
+    }, false)
+ 
+    document.getElementsByClassName('js-play-map-audio')[0].addEventListener('touchend', function(e){
+      var selectedAudio = $("#map-audio")[0]
+      pauseAudio(selectedAudio)
+    }, false)
+
+    document.getElementsByClassName('js-play-dormidas-audio')[0].addEventListener('touchstart', function(e){
+      var selectedAudio = $("#dormidas-audio")[0]
+      playAudio(selectedAudio)
+    }, false)
+ 
+    document.getElementsByClassName('js-play-dormidas-audio')[0].addEventListener('touchend', function(e){
+      var selectedAudio = $("#dormidas-audio")[0]
       pauseAudio(selectedAudio)
     }, false)
 
