@@ -39,6 +39,11 @@ $( document ).ready(function() {
       playAudio(selectedAudio)
   });
 
+   $( ".js-play-rsvp-audio").mouseenter(function() {
+      var selectedAudio = $("#rsvp-audio")[0]
+      playAudio(selectedAudio)
+  });
+
   $( ".js-play-dresscode-audio" ).mouseenter(function() {
       var selectedAudio = $("#dresscode-audio")[0]
       playAudio(selectedAudio)
@@ -56,6 +61,11 @@ $( document ).ready(function() {
 
   $( ".js-play-hero-audio").mouseleave(function() {
       var selectedAudio = $("#hero-audio")[0]
+      pauseAudio(selectedAudio)
+  });
+
+   $( ".js-play-rsvp-audio").mouseleave(function() {
+      var selectedAudio = $("#rsvp-audio")[0]
       pauseAudio(selectedAudio)
   });
 

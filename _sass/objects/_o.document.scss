@@ -2,6 +2,10 @@
   min-height: 100vh;
 }
 
+audio { 
+  display:none;
+}
+
 .o-start{
   position: fixed;
   width: 100%;
@@ -246,7 +250,7 @@
   height: 500px;
   transform: scale(1);
   &:hover{
-    animation: pulse 0.56s infinite;
+    animation: pulse 0.48s infinite;
   }
   @include mappy-bp(md){
     z-index: 1;
