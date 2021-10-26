@@ -1,25 +1,18 @@
 // ---
 $( document ).ready(function() {
     console.log('ready!');
-    $('#magazine').turn({ acceleration: true});
 
-    function disableScroll(){
-      console.log('finalmente!')
+    // init graphs and charts
+    if ($('#magazine').length ) {
+      $('#magazine').turn({ acceleration: true});
     }
 
-    disableScroll();
-
+    $("#nav_audio")[0].load();
 
      $('.js-play-sound').hover(function(){
-      console.log('fale')
         $("#nav_audio")[0].play();
         },
-    function(){
-        $("#nav_audio")[0].load();
-    });
-
-   
-
+    );
 
 });
 // ---

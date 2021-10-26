@@ -102,7 +102,6 @@
 .o-hero__image{
   z-index: 1;
   max-width: 100%;
-  cursor: pointer;
   transform: scale(1);
   &:hover{
     animation: pulse 0.5s infinite;
@@ -161,7 +160,6 @@
 
 .o-map__image{
   height: 500px;
-  cursor: pointer;
   transform: scale(1);
   &:hover{
     animation: pulse 0.5s infinite;
@@ -181,6 +179,9 @@
 .o-dormidas__image{
   z-index: 1;
   width: 100%;
+  &:hover{
+    animation: pulse 0.5s infinite;
+  }
   @include mappy-bp(md){
     padding-left: $qnorr-baseline*6;
   }
