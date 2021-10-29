@@ -1,138 +1,125 @@
 // ---
 $( document ).ready(function() {
 
-  // init graphs and charts
-  if ($('#magazine').length ) {
-    var flipbookEL = document.getElementById('magazine');
-    window.addEventListener('resize', function (e) {
-      flipbookEL.style.width = '';
-      flipbookEL.style.height = '';
-      $(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
-    });
-    $(flipbookEL).turn();
-  }
-
   $( ".js-start-button").click(function() {
       $(".o-start").addClass('u-hidden');
       $(".landing-body").removeClass('u-no-scroll');
   });
 
-  if ($('#hero-audio').length ) {
-    $("#hero-audio")[0].load();
-    $("#dresscode-audio")[0].load();
-    $("#map-audio")[0].load();
-    $("#dormidas-audio")[0].load();
-  
-
-    function playAudio(element) {
-      element.play();
-      element.animate({volume: 1}, 1000);
-    }
-
-    function pauseAudio(element) {
-      element.animate({volume: 0}, 1000);
-      element.pause();
-    }
-
-    // play
-
-    $( ".js-play-hero-audio").mouseenter(function() {
-        var selectedAudio = $("#hero-audio")[0]
-        playAudio(selectedAudio)
-    });
-
-     $( ".js-play-rsvp-audio").mouseenter(function() {
-        var selectedAudio = $("#rsvp-audio")[0]
-        playAudio(selectedAudio)
-    });
-
-    $( ".js-play-dresscode-audio").mouseenter(function() {
-        var selectedAudio = $("#dresscode-audio")[0]
-        playAudio(selectedAudio)
-    });
-
-    $( ".js-play-map-audio" ).mouseenter(function() {
-        var selectedAudio = $("#map-audio")[0]
-        playAudio(selectedAudio)
-    });
-
-    $( ".js-play-map-btn-audio" ).mouseenter(function() {
-        var selectedAudio = $("#map-audio")[0]
-        playAudio(selectedAudio)
-    });
+  $("#hero-audio")[0].load();
+  $("#dresscode-audio")[0].load();
+  $("#map-audio")[0].load();
+  $("#dormidas-audio")[0].load();
 
 
-    $( ".js-play-dormidas-audio" ).mouseenter(function() {
-        var selectedAudio = $("#dormidas-audio")[0]
-        playAudio(selectedAudio)
-    });
+  function playAudio(element) {
+    element.play();
+    element.animate({volume: 1}, 1000);
+  }
 
-    // pause
+  function pauseAudio(element) {
+    element.animate({volume: 0}, 1000);
+    element.pause();
+  }
 
+  // play
 
-    $( ".js-play-hero-audio").mouseleave(function() {
-        var selectedAudio = $("#hero-audio")[0]
-        pauseAudio(selectedAudio)
-    });
+  $( ".js-play-hero-audio").mouseenter(function() {
+      var selectedAudio = $("#hero-audio")[0]
+      playAudio(selectedAudio)
+  });
 
-     $( ".js-play-rsvp-audio").mouseleave(function() {
-        var selectedAudio = $("#rsvp-audio")[0]
-        pauseAudio(selectedAudio)
-    });
+   $( ".js-play-rsvp-audio").mouseenter(function() {
+      var selectedAudio = $("#rsvp-audio")[0]
+      playAudio(selectedAudio)
+  });
 
-    $( ".js-play-dresscode-audio" ).mouseleave(function() {
-        var selectedAudio = $("#dresscode-audio")[0]
-        pauseAudio(selectedAudio)
-    });
+  $( ".js-play-dresscode-audio").mouseenter(function() {
+      var selectedAudio = $("#dresscode-audio")[0]
+      playAudio(selectedAudio)
+  });
 
-    $( ".js-play-map-audio" ).mouseleave(function() {
-        var selectedAudio = $("#map-audio")[0]
-        pauseAudio(selectedAudio)
-    });
+  $( ".js-play-map-audio" ).mouseenter(function() {
+      var selectedAudio = $("#map-audio")[0]
+      playAudio(selectedAudio)
+  });
 
-    $( ".js-play-map-btn-audio" ).mouseleave(function() {
-        var selectedAudio = $("#map-audio")[0]
-        pauseAudio(selectedAudio)
-    });
-
-    $( ".js-play-dormidas-audio" ).mouseleave(function() {
-        var selectedAudio = $("#dormidas-audio")[0]
-        pauseAudio(selectedAudio)
-    });
-
-    //mobile
-       document.getElementsByClassName('js-play-hero-audio')[0].addEventListener('touchstart', function(e){
-        var selectedAudio = $("#hero-audio")[0]
-        playAudio(selectedAudio)
-      }, false)
-   
-      document.getElementsByClassName('js-play-hero-audio')[0].addEventListener('touchend', function(e){
-        var selectedAudio = $("#hero-audio")[0]
-        pauseAudio(selectedAudio)
-      }, false)
+  $( ".js-play-map-btn-audio" ).mouseenter(function() {
+      var selectedAudio = $("#map-audio")[0]
+      playAudio(selectedAudio)
+  });
 
 
-       document.getElementsByClassName('js-play-map-audio')[0].addEventListener('touchstart', function(e){
-        var selectedAudio = $("#map-audio")[0]
-        playAudio(selectedAudio)
-      }, false)
-   
-      document.getElementsByClassName('js-play-map-audio')[0].addEventListener('touchend', function(e){
-        var selectedAudio = $("#map-audio")[0]
-        pauseAudio(selectedAudio)
-      }, false)
+  $( ".js-play-dormidas-audio" ).mouseenter(function() {
+      var selectedAudio = $("#dormidas-audio")[0]
+      playAudio(selectedAudio)
+  });
 
-      document.getElementsByClassName('js-play-dormidas-audio')[0].addEventListener('touchstart', function(e){
-        var selectedAudio = $("#dormidas-audio")[0]
-        playAudio(selectedAudio)
-      }, false)
-   
-      document.getElementsByClassName('js-play-dormidas-audio')[0].addEventListener('touchend', function(e){
-        var selectedAudio = $("#dormidas-audio")[0]
-        pauseAudio(selectedAudio)
-      }, false)
+  // pause
 
-    }
+
+  $( ".js-play-hero-audio").mouseleave(function() {
+      var selectedAudio = $("#hero-audio")[0]
+      pauseAudio(selectedAudio)
+  });
+
+   $( ".js-play-rsvp-audio").mouseleave(function() {
+      var selectedAudio = $("#rsvp-audio")[0]
+      pauseAudio(selectedAudio)
+  });
+
+  $( ".js-play-dresscode-audio" ).mouseleave(function() {
+      var selectedAudio = $("#dresscode-audio")[0]
+      pauseAudio(selectedAudio)
+  });
+
+  $( ".js-play-map-audio" ).mouseleave(function() {
+      var selectedAudio = $("#map-audio")[0]
+      pauseAudio(selectedAudio)
+  });
+
+  $( ".js-play-map-btn-audio" ).mouseleave(function() {
+      var selectedAudio = $("#map-audio")[0]
+      pauseAudio(selectedAudio)
+  });
+
+  $( ".js-play-dormidas-audio" ).mouseleave(function() {
+      var selectedAudio = $("#dormidas-audio")[0]
+      pauseAudio(selectedAudio)
+  });
+
+  //mobile
+     document.getElementsByClassName('js-play-hero-audio')[0].addEventListener('touchstart', function(e){
+      var selectedAudio = $("#hero-audio")[0]
+      playAudio(selectedAudio)
+    }, false)
+ 
+    document.getElementsByClassName('js-play-hero-audio')[0].addEventListener('touchend', function(e){
+      var selectedAudio = $("#hero-audio")[0]
+      pauseAudio(selectedAudio)
+    }, false)
+
+
+     document.getElementsByClassName('js-play-map-audio')[0].addEventListener('touchstart', function(e){
+      var selectedAudio = $("#map-audio")[0]
+      playAudio(selectedAudio)
+    }, false)
+ 
+    document.getElementsByClassName('js-play-map-audio')[0].addEventListener('touchend', function(e){
+      var selectedAudio = $("#map-audio")[0]
+      pauseAudio(selectedAudio)
+    }, false)
+
+    document.getElementsByClassName('js-play-dormidas-audio')[0].addEventListener('touchstart', function(e){
+      var selectedAudio = $("#dormidas-audio")[0]
+      playAudio(selectedAudio)
+    }, false)
+ 
+    document.getElementsByClassName('js-play-dormidas-audio')[0].addEventListener('touchend', function(e){
+      var selectedAudio = $("#dormidas-audio")[0]
+      pauseAudio(selectedAudio)
+    }, false)
+
 
 });
 // ---
