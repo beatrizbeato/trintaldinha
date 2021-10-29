@@ -67,6 +67,7 @@ audio {
   &:hover{
     background: get-color(white);
     color: get-color(black);
+    animation: pulse 0.6s infinite;
   }
   @include mappy-bp(s){
     margin-top: $qnorr-baseline*6;
@@ -155,13 +156,16 @@ audio {
 }
 
 .c-link{
+  display: inline-block;
   background: get-color(black);
   color: get-color(white);
+  border: 2px solid get-color(black);
   padding: $qnorr-baseline;
   transition: all 0.2s ease-in-out;
   &:hover{
     background: get-color(white);
     color: get-color(black);
+    animation: pulse 0.6s infinite;
   }
 }
 
@@ -277,20 +281,6 @@ audio {
   }
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(0.95);
-  }
-  50% {
-    transform: scale(1);
-  }
-  
-  100% {
-    transform: scale(0.95);
-  }
-}
-
-
 .o-magazine{
   position: relative;
   padding: $qnorr-baseline*4 0px $qnorr-baseline*6;
@@ -303,17 +293,23 @@ audio {
   left: $qnorr-baseline*2;
 }
 
+
+
 .o-magazine__header-link{
+  display: inline-block;
   background: get-color(black);
   color: get-color(white);
+  border: 2px solid get-color(black);
   padding: $qnorr-baseline;
   font-size: 14px;
   transition: all 0.2s ease-in-out;
   &:hover{
     background: get-color(white);
     color: get-color(black);
+    animation: pulse 0.6s infinite;
   }
 }
+
 
 .o-magazine__instructions{
   width: 100%;
@@ -402,14 +398,11 @@ audio {
   font-size: 13px;
 }
 
-
-
 #magazine .turn-page{
   background-color: #ccc;
 }
 
 .hard-ext{
-
   background: #E1E1E1 !important;
 }
 
@@ -599,5 +592,16 @@ audio {
   padding: $qnorr-baseline*3;
 }
 
-
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1);
+  }
+  
+  100% {
+    transform: scale(0.95);
+  }
+}
 
