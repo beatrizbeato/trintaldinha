@@ -398,6 +398,12 @@ audio {
   font-size: 13px;
 }
 
+.page-wrapper {
+  &:first-child{
+    box-shadow: 0px 2px 4px rgba(get-color(black), 0.2);
+  }
+}
+
 #magazine .turn-page{
   background-color: #ccc;
 }
@@ -576,6 +582,7 @@ audio {
   width: 100%;
   max-width: 500px;
   margin: 0px auto;
+  box-shadow: 0px -2px 6px rgba(get-color(black), 0.3);
 }
 
 .o-mobile-mag__inner{
